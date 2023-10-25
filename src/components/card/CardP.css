@@ -1,0 +1,17 @@
+.mainCard {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display:flex;
+    flex-direction: column;
+    outline: 5px;
+    border: solid 5px black;
+    border-radius: 45px;
+    align-items: center;
+    justify-content: center;
+    max-width: 3px;
+    padding: 50px 30px;
+}
+

@@ -1,0 +1,14 @@
+.navbar {
+    display:flex;
+    background-color:  #d9d9d9;
+}
+
+.navbarHomeFather{
+    background-color: #5889cb;
+    color: #ffff;
+    padding: 11px;
+}
+
+.navbarChild {
+padding: 11px;
+}
