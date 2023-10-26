@@ -18,7 +18,14 @@ function Navbar(){
             <div className = "navbarChild">
                 Cadastro de Vendas
             </div>
+            <div className = "navbarChildLogin">
+                Logar
+            </div>
+            <div className = "navbarChildSignup">
+                Cadastrar
+            </div>
         </div>
+        
     )
 }
 

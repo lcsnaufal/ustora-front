@@ -1,4 +1,4 @@
-.mainCard {
+/* .mainCard {
     display: flex;
     justify-content: center;
 }
@@ -15,3 +15,34 @@
     padding: 50px 30px;
 }
 
+/* .cardImage {
+    width: 80px;
+    height: 80px;
+} */ 
+
+.mainCard{
+    display:flex;
+    justify-content: center;
+}
+
+.cards{
+    border: 8px outset black;
+    margin: 20px 20px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.cardImage{
+    width: 300px;
+    height: 300px;
+}
+
+.cardTitle{
+    font-size: 22px;
+    margin: 0 0 0 7px;
+}
+
+.cardSubTitle{
+    font-size: 15px;
+    margin: 0 0 0 7px
+}

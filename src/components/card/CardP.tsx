@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import './Card.css';
+import './CardP.css';
 import GetSalesperson from '../../Services/api';
 
 

@@ -18,34 +18,26 @@ async function GetSalesperson(divId: HTMLDivElement){
                 ...value
             }));
 
+            var content: "";
+
             dataSalespersonArray.forEach((dados) => {
 
-                
-                console.log('cheguei na criacao')
-
-                
-                var teste: string;
-
-                teste.innerHTML = `
-                        <div className="cards">
-                            <div className="cardImg">
-                                <img src = ${dados.name} alt = ""></img>        
+                content += `
+                        <div class="cards">
+                            <div class="cardImg">
+                                <img src = ${dados.name} alt = "" class = "cardImage"></img>        
                             </div>
-                            <div className="cardTitle">
+                            <div class="cardTitle">
                                 ${dados.lastName}        
                             </div>
-                            <div className="cardSubTitle">
+                            <div class="cardSubTitle">
                                 ${dados.phoneNumber}        
                             </div>
                         </div>
                 `;
 
-                console.log("cheguei depois da criacao")
-                console.log( "TESTE", teste)
-        
+                divId.innerHTML = content;
 
-                divId.appendChild(teste);
-                // document.body.appendChild(newDiv);
 
             }   
         )

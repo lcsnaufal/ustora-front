@@ -12,3 +12,12 @@
 .navbarChild {
 padding: 11px;
 }
+
+.navbarChildLogin{
+    padding: 11px;
+    margin: 0 0 0 1100px;
+}
+
+.navbarChildSignup{
+    padding: 11px;
+}
