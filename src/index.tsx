@@ -1,28 +1,45 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/navbar/Navbar';
-import MainImage from './components/mainImage/MainImage';
-import ProductsText from './components/productsText/ProductsText';
-import CardP from './components/card/CardP';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from './pages/Home';
+import Users from './pages/Users';
+import SalesPerson from './pages/SalesPerson';
+import Products from './pages/Products';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  // <React.StrictMode>  
-  <>
-  <Navbar/>
-  <MainImage/>
-  <ProductsText/>
-  <CardP/>
-  </>
-  // </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+export default function App() {
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path = "/" element={<Layout/>}>
+          <Route index element = {<Home/>}/>
+          <Route path="users" element = {<Users/>}/>
+          <Route path = "salesperson" element = {<SalesPerson/>}/>
+          <Route path = "products" element = {<Products/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+ReactDOM.render(<App/>, document.getElementById("root"));
+
 reportWebVitals();
+
+// const root = ReactDOM.createRoot(
+//   document.getElementById('root') as HTMLElement
+// );
+// root.render(
+//   // <React.StrictMode>  
+//   <>
+//   {/* <Navbar/>
+//   <MainImage/>
+//   <ProductsText/>
+//   <CardP/> */}
+//   </>
+//   // </React.StrictMode>
+// );
+
