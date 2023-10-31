@@ -1,9 +1,10 @@
 import React from 'react';
+import ProductsInput from '../components/productsInput/ProductsInput';
 
 function Products(){
     return(
         <>
-        <h1>products page teste</h1>
+        <ProductsInput/>
         </>
     )
 }

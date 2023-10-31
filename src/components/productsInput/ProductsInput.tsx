@@ -1,35 +1,33 @@
 import React from "react";
-import "./UserInput.css";
+import "./ProductsInput.css";
 import axios from "axios";
 
 // 
 
-async function UserDataPost(){
+async function ProductsDataPost(){
 
-    var userNameInput = document.getElementById("userName")  as HTMLInputElement || null;
-    var userLastNameInput = document.getElementById("userLastName")  as HTMLInputElement || null;
-    var userAgeInput = document.getElementById("userAge")  as HTMLInputElement || null;
-    var userAddressInput = document.getElementById("userAddress") as HTMLInputElement || null;
-    var userEmailInput = document.getElementById("userEmail")  as HTMLInputElement || null;
-    var userCpfInput = document.getElementById("userPassword")  as HTMLInputElement || null;
-    var userPasswordInput = document.getElementById("userCpf")  as HTMLInputElement || null;
-    var userUrl = "http://localhost:8080/api/usuario";
+    var productsNameInput = document.getElementById("productsName")  as HTMLInputElement || null;
+    var productsPriceInput = document.getElementById("productsPrice")  as HTMLInputElement || null;
+    var productsColorInput = document.getElementById("productsColor")  as HTMLInputElement || null;
+    var productsDescriptionInput = document.getElementById("productsDescription")  as HTMLInputElement || null;
+    var productsQuantityInput = document.getElementById("productsQuantity")  as HTMLInputElement || null;
+    var productsImgInput = document.getElementById("productsImage")  as HTMLInputElement || null;
+    var productsUrl = "http://localhost:8080/api/produtos";
 
-    var userDataJson = {
+    var productsDataJson = {
 
-        "name": userNameInput.value.toString(),
-        "lastName": userLastNameInput.value.toString(),
-        "age": userAgeInput.value.toString(),
-        "cpf": userCpfInput.value.toString(),
-        "email": userEmailInput.value.toString(),
-        "password": userPasswordInput.value.toString(),
-        "address": userAddressInput.value.toString()
+        "pName": productsNameInput.value.toString(),
+        "pPrice": productsPriceInput.value.toString(),
+        "pColor": productsColorInput.value.toString(),
+        "pDescription": productsDescriptionInput.value.toString(),
+        "pQuantity": productsQuantityInput.value.toString(),
+        "pImg": productsImgInput.value.toString()
         
     
     }
 
 
-    await axios.post(userUrl, userDataJson,
+    await axios.post(productsUrl, productsDataJson,
         {
             headers : {
                 "Content-Type":"application/json",
@@ -42,44 +40,38 @@ async function UserDataPost(){
 
 
 
-function UserInput(){
+function ProductsInput(){
     return(
-        <div className="UserInputMain">
-            <div className="UserInputBody">
-                <label>Nome: </label>
-                <input type = "text" id = "userName"/>
+        <div className="ProductsInput">
+
+            <div className="mainBody">
+
+                <div className="ProductsInputBody">
+                    <input type = "text" id = "productsName" placeholder="Nome" className="inputs"/>
+                </div>
+                <div className="ProductsInputBody">
+                    <input type = "text" id = "productsPrice" placeholder="Preço" className="inputs"/>
+                </div>
+                <div className="ProductsInputBody">
+                    <input type = "text" id = "productsColor" placeholder="Cor" className="inputs"/>
+                </div>
+                <div className="ProductsInputBody">
+                    <input type = "text" id = "productsDescription" placeholder="Descrição" className="inputs"/>
+                </div>
+                <div className="ProductsInputBody">
+                    <input type = "text" id = "productsQuantity" placeholder="Quantidade" className="inputs"/>
+                </div>
+                <div className="ProductsInputBody">
+                    <input type = "text" id = "productsImage" placeholder="Imagem" className="inputs"/>
+                </div>
+                <button type = "submit" id="sendBtnPost" className="button" onClick={ProductsDataPost}>Post</button>
+
             </div>
-            <div className="UserInputBody">
-                <label>Sobrenome: </label>
-                <input type = "text" id = "userLastName"/>
-            </div>
-            <div className="UserInputBody">
-                <label>Idade: </label>
-                <input type = "text" id = "userAge"/>
-            </div>
-            <div className="UserInputBody">
-                <label>Endereço: </label>
-                <input type = "text" id = "userAddress"/>
-            </div>
-            <div className="UserInputBody">
-                <label>Email: </label>
-                <input type = "text" id = "userEmail"/>
-            </div>
-            <div className="UserInputBody">
-                <label>Senha: </label>
-                <input type = "text" id = "userPassword"/>
-            </div>
-            <div className="UserInputBody">
-                <label>CPF: </label>
-                <input type = "text" id = "userCpf"/>
-            </div>
-            
-            <button type = "submit" id="sendBtnPost" onClick={UserDataPost}>Post</button>
         </div>
     );
 };
 
-export default UserInput;
+export default ProductsInput;
 
     // <button type = "submit" id="sendBtn" onClick={UserDataGet}>Get</button>
 

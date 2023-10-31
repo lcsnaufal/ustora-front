@@ -8,17 +8,21 @@ import Home from './pages/Home';
 import Users from './pages/Users';
 import SalesPerson from './pages/SalesPerson';
 import Products from './pages/Products';
+import BlankPage from './pages/BlankPage';
 
+
+// BrowserRouter basename
 
 export default function App() {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename='/br/'>
       <Routes>
-        <Route path = "/" element={<Layout/>}>
+        <Route element={<Layout/>}>   
           <Route index element = {<Home/>}/>
-          <Route path="users" element = {<Users/>}/>
+          <Route path = "users" element = {<Users/>}/>
           <Route path = "salesperson" element = {<SalesPerson/>}/>
           <Route path = "products" element = {<Products/>}/>
+          <Route path = "*" element = {<BlankPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

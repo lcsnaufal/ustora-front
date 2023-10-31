@@ -1,16 +1,18 @@
-.SalesPersonInput{
+.ProductsInput{
     display:flex;
     align-items: center;
     flex-direction: column;
 }
 
 .mainBody {
+    display:flex;
     background-color: #f7f7f7;
     margin-top: 100px;
     padding: 100px;
+    flex-direction: column;
 }
 
-input {
+.inputs {
     margin: 30px;
     border-radius: 5px;
     padding: 3px;

@@ -39,32 +39,30 @@ async function SalesPersonDataPost(){
 
 function SalesPersonInput(){
     return(
-        <div className="SalesPersonInputMain">
-            <div className="SalesPersonInputBody">
-                <label>Nome: </label>
-                <input type = "text" id = "salesPersonName"/>
+        <div className="SalesPersonInput">
+            <div className = "mainBody">
+                <div className="SalesPersonInputBody">
+                    <input type = "text" id = "salesPersonName" placeholder='Nome'/>
+                </div>
+                <div className="SalesPersonInputBody">
+                    <input type = "text" id = "salesPersonLastName" placeholder='Sobrenome'/>
+                </div>
+                <div className="SalesPersonInputBody">
+                    <label>Número de telefone: </label>
+                    <input type = "text" id = "salesPersonPhoneNumber" placeholder='00 00000-0000'/>
+                </div>
+                <div className="SalesPersonInputBody">
+                    <input type = "text" id = "salesPersonAddress" placeholder='Endereço'/>
+                </div>
+                <div className="SalesPersonInputBody">
+                    <input type = "text" id = "salesPersonEmail" placeholder='Email'/>
+                </div>
+                <div className="SalesPersonInputBody">
+                    <label>Cpf: </label>
+                    <input type = "text" id = "salesPersonCpf" placeholder='000.000.000-00'/>
+                </div>
+                <button type = "submit" id="sendBtnPost"  className='button' onClick={SalesPersonDataPost}>Post</button>
             </div>
-            <div className="SalesPersonInputBody">
-                <label>Sobrenome: </label>
-                <input type = "text" id = "salesPersonLastName"/>
-            </div>
-            <div className="SalesPersonInputBody">
-                <label>Número de telefone: </label>
-                <input type = "text" id = "salesPersonPhoneNumber"/>
-            </div>
-            <div className="SalesPersonInputBody">
-                <label>Endereço: </label>
-                <input type = "text" id = "salesPersonAddress"/>
-            </div>
-            <div className="SalesPersonInputBody">
-                <label>Email: </label>
-                <input type = "text" id = "salesPersonEmail"/>
-            </div>
-            <div className="SalesPersonInputBody">
-                <label>CPF: </label>
-                <input type = "text" id = "salesPersonCpf"/>
-            </div>
-            <button type = "submit" id="sendBtnPost" onClick={SalesPersonDataPost}>Post</button>
         </div>
     );
 };
