@@ -15,7 +15,7 @@ import BlankPage from './pages/BlankPage';
 
 export default function App() {
   return(
-    <BrowserRouter basename='/br/'>
+    <BrowserRouter basename='/pi/'>
       <Routes>
         <Route element={<Layout/>}>   
           <Route index element = {<Home/>}/>

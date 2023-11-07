@@ -9,9 +9,17 @@
     padding: 11px;
 }
 
-.navbarChild {
-padding: 11px;
+.navbarHome {
+    text-decoration: none;
+    color: #000000;
 }
+
+.navbarChild {
+    padding: 11px;
+    text-decoration: none;
+    color: #000000;
+}
+
 
 .navbarChildLogin{
     padding: 11px;
@@ -20,4 +28,9 @@ padding: 11px;
 
 .navbarChildSignup{
     padding: 11px;
+}
+
+.disableLink {
+    pointer-events: none;
+    color: #575555;
 }
