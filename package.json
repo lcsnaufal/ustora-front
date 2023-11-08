@@ -1,6 +1,7 @@
 {
   "name": "ustora",
   "version": "0.1.0",
+  "homepage": "http://localhost:8080/pi/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

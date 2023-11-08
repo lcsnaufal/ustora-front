@@ -30,22 +30,22 @@ function Navbar(){
     return(
         <div className= "navbar">
             <div className = "navbarHomeFather" id = "home">
-                <Link to = "/" className = "navbarHome">
+                <Link to = "/" className = "navbarHome" onClick={Navbar}>
                     Home
                 </Link>
             </div>
             <div id = "products" className = "navbarChild">
-            <Link to = "products" className = "navbarChild" >
+            <Link to = "products" className = "navbarChild" onClick={Navbar}>
                 Cadastro de Produtos
             </Link>
             </div>
             <div className = "navbarChild" id = "users">
-            <Link to = "users" className = "navbarChild">
+            <Link to = "users" className = "navbarChild" onClick={Navbar}>
                 Cadastro de Usuários
             </Link>
             </div>
             <div id = "sales" className = "navbarChild">
-            <Link to = "salesperson" className = "navbarChild">
+            <Link to = "salesperson" className = "navbarChild" onClick={Navbar}>
                 Cadastro de Vendas
             </Link>
             </div>
