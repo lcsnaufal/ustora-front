@@ -10,9 +10,6 @@ import SalesPerson from './pages/SalesPerson';
 import Products from './pages/Products';
 import BlankPage from './pages/BlankPage';
 
-
-// BrowserRouter basename
-
 export default function App() {
   return(
     <BrowserRouter basename='/pi/'>
@@ -32,18 +29,3 @@ export default function App() {
 ReactDOM.render(<App/>, document.getElementById("root"));
 
 reportWebVitals();
-
-// const root = ReactDOM.createRoot(
-//   document.getElementById('root') as HTMLElement
-// );
-// root.render(
-//   // <React.StrictMode>  
-//   <>
-//   {/* <Navbar/>
-//   <MainImage/>
-//   <ProductsText/>
-//   <CardP/> */}
-//   </>
-//   // </React.StrictMode>
-// );
-
