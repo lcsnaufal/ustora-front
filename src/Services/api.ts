@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 async function GetSalesperson(divId: HTMLDivElement){
-    const salesPersonUrl = "http://localhost:8080/api/vendedor";
+    const salesPersonUrl = "http://localhost:8090/api/vendedor";
 
     await axios.get(salesPersonUrl)
     .then((response) =>{

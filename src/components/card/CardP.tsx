@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import './CardP.css';
-import GetSalesperson from '../../Services/api';
+import GetSalesperson from '../../services/api';
 
 
 var teste = GetSalesperson;
